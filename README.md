@@ -54,4 +54,4 @@ npm run start
 ## Authors
 
 * **Arpit Agrawal**  - [Github](https://github.com/arpit9667)
-* **arpitagrawal312@gmail.com** * 
+* **arpitagrawal312@gmail.com** 
