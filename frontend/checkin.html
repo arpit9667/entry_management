@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Check In Form</title>
+                <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+                <link rel="stylesheet" type='text/css' href="styles.css">
+            </head>
+            <body>
+              
+              <form action="/checkin" method="post">
+              
+                <h1>Check In Form</h1>
+                
+                <fieldset>
+                  <legend><span class="number">1</span>Host Details</legend>
+                  <label for="host">Name:</label>
+                  <input type="text" id="host" name="host">
+                  
+                  <label for="hmail">Email:</label>
+                  <input type="email" id="hmail" name="hmail">
+                  
+                  <label for="hphone">Phone:</label>
+                  <input type="tel" id="hphone" name="hphone">
+                </fieldset>
+                
+                <fieldset>
+                  <legend><span class="number">2</span>Guest Details</legend>
+                  <label for="visitor">Name:</label>
+                  <input type="text" id="visitor" name="visitor">
+                  
+                  <label for="vmail">Email:</label>
+                  <input type="email" id="vmail" name="vmail">
+                  
+                  <label for="vphone">Phone:</label>
+                  <input type="tel" id="vphone" name="vphone">
+                </fieldset>
+                <button type="submit">Check In</button>
+              </form>
+              <form action="/displaycurrent" method="get">
+                <button type="submit">Get Current Sessions</button>
+              </form>
+
+              
+            </body>
+</html>

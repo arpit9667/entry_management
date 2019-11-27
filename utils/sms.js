@@ -1,9 +1,10 @@
-const accountSid = "AC91a567af69b4eaf100e3f121c7f8fedf"
-const authToken =  "864d4bc2004ad429b2dd677b23fe04f0"
-const phone = "+12056513884"
+const accountSid = process.env.SMS_SID
+const authToken =  process.env.SMS_TOKEN
+const phone = process.env.SMS_PHONE
 
 const client = require('twilio')(accountSid,authToken)
 const sendsms = (mobile,smsOptions) => {
+    console.log(mobile);
     client.messages.create({
         body: smsOptions,
         from: phone,

@@ -4,16 +4,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "env-cmd -f ./config/default.env node app.js"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "description": "",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "env-cmd": "^10.0.1",
     "express": "^4.17.1",
-    "hbs": "^4.0.6",
     "mongoose": "^5.7.12",
+    "node-fetch": "^2.6.0",
     "nodemailer": "^6.3.1",
     "twilio": "^3.37.1",
     "validator": "^12.1.0"
