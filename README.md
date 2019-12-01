@@ -39,7 +39,24 @@ npm run start
 7. Twilio-API to send SMS
 
 ## Folder Structure
-<img src="./folder.png" style="width: 50%; height:100%;" />
+-----root
+    |-----config
+            |------dev.env
+    |-----frontend
+            |------404.html
+            |------checkin.html
+            |------display.html
+            |------styles.css
+            |------scripts.js
+    |-----utils
+            |------connect.js
+            |------mail.js
+            |------sms.js
+            |------router.js
+            |------model.js
+    |-----app.js
+    |-----package.json
+    |-----README.md
 
 ## Approach
 Whenever a user checks in, he/she needs to fill a checkin form:
