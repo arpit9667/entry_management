@@ -63,7 +63,7 @@ When a user wants to checkout, application will have a button for getting the cu
 <img src="./Checkout.png"/>
 <img src="./M1.png"/>
 <img src="./M2.png"/>
-<img src="./M3.png"/>
+<img src="./M3.jpg"/>
 
 ## Working
 1. '/checkin': Homepage(Image attached above).
