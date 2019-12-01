@@ -3,27 +3,24 @@
 Given the visitors that we have in office and outside, there is a need to for an entry management
 software.
 
-## Getting Started
+## Project Configuration
 ```
 1. Clone the repository:
     git clone https://github.com/arpit9667/entry_management
 
 2. Install Dependencies
     npm install
-```
-### Prerequisites
 
-Create an account at Twilio(https://www.twilio.com) to get a valid mobile number and authentication token to send SMS.
+3. Create an account at Twilio(https://www.twilio.com) to get a valid mobile number and authentication token to send SMS.
 
-```
-Update the /config/dev.env configuration file
-    "MONGODB_URL"
-    "EMAIL_SERVICE"
-    "USER_NAME"
-    "USER_PASSWORD"
-    "SMS_SID"
-    "SMS_TOKEN"
-    "SMS_PHONE"
+    Update the /config/dev.env configuration file
+        "MONGODB_URL"
+        "EMAIL_SERVICE"
+        "USER_NAME"
+        "USER_PASSWORD"
+        "SMS_SID"
+        "SMS_TOKEN"
+        "SMS_PHONE"
 ```
 
 ```
@@ -45,34 +42,22 @@ npm run start
 <img src="./folder.png" style="width: 50%; height:100%;" />
 
 ## Approach
-Whenever a user checks in, he/she needs to fill a form containing fields like 
-```
-    - Host Name
-    - Host Email
-    - Host Phone
-    - Visitor Name
-    - Visitor Email
-    - Visitor Phone
-   ```
+Whenever a user checks in, he/she needs to fill a checkin form:
+<img src="./UI.png"/>
 After submitting the form, POST request to the route /checkin is sent with request-body as formData, the formData is then saved into a MongoDB Database along with the timestamp when the form is submitted which implies the checkin time for the visitor. While storing the data to MongoDB, the value of checkout field is NULL. Also, an email and a sms is also sent to the host containing the visitor's details. Twilio api and nodemailer are used for sending the sms and email notification respectively.
 
 When a user wants to checkout, application will have a button for getting the current sessions. Clicking this button will send a GET request to the /displayCurrent route. From the fetched sessions, the user can choose his/her session to checkout. User has to click the Checkout button which will send a POST request to the /checkout route with request-body containing the unique id for the session(he/she wants to checkout). The checkout field for the session will be modified to the timestamp when the request is sent. Also, an email and sms will be sent to the visitor containing the deatils about the recent visit.
 
-## UI
-<img src="./UI.png"/>
-<img src="./Checkout.png"/>
+ <img src="./Checkout.png"/>
+
+## Sample Notifications
 <img src="./M1.png"/>
+
 <img src="./M2.png"/>
+
 <img src="./M3.jpg"/>
 
-## Working
-1. '/checkin': Homepage(Image attached above).
-2. Homepage will contain 'checkin' form  and 'Get Current Session' button that will fetch the current sessions available.
-3. After submitting the checkin form, the host will recieve an email and sms containing the visitor details.
-4. When a person wants to checkout, he/she can click on the 'Get Current Session' and can checkout his/her session. He/She will get an email and sms containing the information about the recent visit.
-
-
-## Authors
+## Author
 
 * **Arpit Agrawal**  - [Github](https://github.com/arpit9667)
 * **arpitagrawal312@gmail.com** 
