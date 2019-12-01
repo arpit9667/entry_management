@@ -56,8 +56,10 @@ After submitting the form, POST request to the route /checkin is sent with reque
 When a user wants to checkout, application will have a button for getting the current sessions. Clicking this button will send a GET request to the /displayCurrent route. From the fetched sessions, the user can choose his/her session to checkout. User has to click the Checkout button which will send a POST request to the /checkout route with request-body containing the unique id for the session(he/she wants to checkout). The checkout field for the session will be modified to the timestamp when the request is sent. Also, an email and sms will be sent to the visitor containing the deatils about the recent visit.
 
 ## UI
-<img src="./ui.png"/>
+<img src="./UI.png"/>
 <img src="./Checkout.png"/>
+<img src="./M1.png"/>
+<img src="./M2.png"/>
 
 ## Working
 1. '/checkin': Homepage(Image attached above).
