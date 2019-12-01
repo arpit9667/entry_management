@@ -43,6 +43,7 @@ npm run start
 
 ## UI
 <img src="./ui.png"/>
+<img src="./checkout.png"/>
 
 ## Working
 1. '/checkin': Homepage(Image attached above).
