@@ -16,7 +16,7 @@
     "env-cmd": "^10.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.7.12",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "nodemailer": "^6.3.1",
     "twilio": "^3.37.1",
     "validator": "^12.1.0"
